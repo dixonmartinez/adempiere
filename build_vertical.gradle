@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'war' // si usas web
+    id 'war'
 }
 
 java {
@@ -13,9 +13,13 @@ repositories {
 }
 
 dependencies {
-    // Dependencias básicas del proyecto original
-    implementation fileTree(dir: 'lib', include: '*.jar')
-    implementation fileTree(dir: 'packages', include: '*.jar')
-    // ZK básico
-    // JasperReports
+    // HikariCP (pool de conexiones) - descarga automática
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    // PostgreSQL driver
+    implementation 'org.postgresql:postgresql:42.7.3'
+    // MySQL / MariaDB driver
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.4.0'
+    // ZK básico (dependencia del proyecto original)
+    // JasperReports (dependencia del proyecto original)
+    // Nota: AdempiereException es código interno (base/src), no un jar externo
 }
