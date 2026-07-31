@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'war' // si usas web
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Dependencias básicas del proyecto original
+    implementation fileTree(dir: 'lib', include: '*.jar')
+    implementation fileTree(dir: 'packages', include: '*.jar')
+    // ZK básico
+    // JasperReports
+}
