@@ -12,6 +12,14 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['base/src']
+        }
+    }
+}
+
 dependencies {
     // HikariCP (pool de conexiones) - descarga automática
     implementation 'com.zaxxer:HikariCP:5.0.1'
