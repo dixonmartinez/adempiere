@@ -29,5 +29,7 @@ dependencies {
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.4.0'
     // ZK básico (dependencia del proyecto original)
     // JasperReports (dependencia del proyecto original)
+    // Vavr (funcional, usado por algunas clases de ADempiere)
+    implementation 'io.vavr:vavr:0.10.4'
     // Nota: AdempiereException es código interno (base/src), no un jar externo
 }
